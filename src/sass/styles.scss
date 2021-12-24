@@ -1,0 +1,220 @@
+@use 'variables' as v;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: v.$font-family-rubik;
+  font-size: v.$font-size-base;
+  background-color: v.$very-dark-blue;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 100vh;
+}
+
+.cards {
+  display: grid;
+  gap: 30px;
+  grid-auto-rows: 245px;
+  grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
+  width: min(90%, 1110px);
+}
+
+.card {
+  position: relative;
+  background: wheat;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0px 8px 12px 6px rgba(0, 0, 0, 0.15),
+    0px 4px 4px rgba(0, 0, 0, 0.3);
+  &--report {
+    background-color: v.$dark-blue;
+    grid-row: span 2;
+  }
+  &__report-for {
+    background-color: v.$blue;
+    width: 100%;
+    height: 355px;
+    border-radius: 0 0 15px 15px;
+    padding: 28px;
+  }
+  &__img {
+    width: 85px;
+    border: 3px solid white;
+    border-radius: 50%;
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+  &__name {
+    color: white;
+    font-weight: 300;
+    font-size: 2.5rem;
+    margin: 0;
+  }
+  &__text {
+    color: v.$pale-blue;
+    font-weight: 500;
+    margin-top: 42px;
+    margin-bottom: 12px;
+    font-size: 0.875rem;
+  }
+  &--work {
+    background-color: v.$light-red-work;
+    background-image: url(../images/icon-work.svg);
+    background-position: 90% -6%;
+  }
+  &--play {
+    background-color: v.$soft-blue-play;
+    background-image: url(../images/icon-play.svg);
+    background-position: 90% -5%;
+  }
+  &--study {
+    background-color: v.$light-red-study;
+    background-image: url(../images/icon-study.svg);
+    background-position: 90% -6%;
+  }
+  &--exercise {
+    background-color: v.$lime-green-exercise;
+    background-image: url(../images/icon-exercise.svg);
+    background-position: 90% 0%;
+  }
+  &--social {
+    background-color: v.$violet-social;
+    background-image: url(../images/icon-social.svg);
+    background-position: 90% 0%;
+  }
+  &--self-care {
+    background-color: v.$soft-orange-self-care;
+    background-image: url(../images/icon-self-care.svg);
+    background-position: 90% -6%;
+  }
+  &__hours-content {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 200px;
+    color: white;
+    background-color: v.$dark-blue;
+    border-radius: 15px 15px 0 0;
+    cursor: pointer;
+    padding: 30px;
+    transition: background-color 0.2s ease-in-out;
+    &:hover {
+      background-color: hsl(236, 34%, 26%);
+    }
+  }
+  &__top-disc {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    span {
+      display: grid;
+      place-items: center;
+    }
+  }
+  &__title {
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin: 0;
+  }
+  &__hours {
+    font-size: 3.5rem;
+    font-weight: 300;
+    margin: 0;
+    margin-top: 1rem;
+  }
+  &__previous {
+    font-size: 0.875rem;
+    font-weight: 400;
+    margin: 0;
+    color: v.$pale-blue;
+  }
+}
+
+.nav {
+  padding: 28px;
+  &__time {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: v.$desaturated-blue;
+    margin: 0;
+    list-style: none;
+    padding-left: 0;
+  }
+  &__link {
+    color: v.$desaturated-blue;
+    font-weight: 400;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+    &:hover {
+      color: v.$pale-blue;
+    }
+    &--active {
+      color: v.$pale-blue;
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .cards {
+      margin-top: 80px;
+      margin-bottom: 80px;
+      grid-template-rows: 205px repeat(6,160px);
+  }
+  .card {
+    &--report {
+      grid-row: span 1;
+    }
+    &__report-for {
+      height: 135px;
+      border-radius: 0 0 15px 15px;
+      padding: 28px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    &__text {
+      margin: 0;
+      font-size: 0.75rem;
+      margin-bottom: .5rem;
+    }
+    &__name {
+      font-size: 1.5rem;
+    }
+    &__hours-content {
+      height: 122px;
+      padding: 23px;
+    }
+    &__bottom-disc {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 0.875rem;
+    }
+    &__hours {
+      font-size: 2.5rem;
+      margin-top: 0rem;
+    }
+  }
+  .nav {
+    padding: 28px;
+    &__time {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}

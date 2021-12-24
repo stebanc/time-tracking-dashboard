@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name='description'
+    content='This is a solution to the Time tracking dashboard challenge on Frontend Mentor. Frontend Mentor challenges help you improve your coding skills by building realistic projects.'>
+  <meta name='keywords' content='frontendMentor, HTML, SASS/SCSS, Typescript, eslint, git, BEM, challenge'>
+  <meta name='author' content='Esteban Canaza Ayarachi'>
+
+  <!-- twitter card -->
+  <meta name='twitter:card' content='summary_large_image'>
+  <meta name='twitter:site' content='@stebanc'>
+  <meta name='twitter:url' content='https://stebanc.github.io/time-tracking-dashboard/'>
+  <meta name='twitter:title' content='# Frontend Mentor - Ping coming soon page solution'>
+  <meta name='twitter:description'
+    content='This is a solution to the Time tracking dashboard challenge on Frontend Mentor. Frontend Mentor challenges help you improve your coding skills by building realistic projects.'>
+  <meta name='twitter:image'
+    content='https://stebanc.github.io/time-tracking-dashboard/images/time-tracking-dashboard-solution.png'>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/styles.css">
+
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+      position: absolute;
+      bottom: 50px;
+      color: white;
+    }
+
+    .attribution a {
+      color: hsl(235, 45%, 61%);
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <section id="cards" class="cards">
+      <div class="card card--report">
+        <div class="card__report-for">
+          <div class="card__img">
+            <img src="./images/image-jeremy.png" alt="Jeremy">
+          </div>
+          <div>
+            <p class="card__text">Report for</p>
+            <h1 class="card__name">Jeremy Robson</h1>
+          </div>
+        </div>
+        <nav class="nav">
+          <ul class="nav__time">
+            <li><a id="daily" class="nav__link" href="#">Daily</a></li>
+            <li><a id="weekly" class="nav__link nav__link--active" href="#">Weekly</a></li>
+            <li><a id="monthly" class="nav__link" href="#">Monthly</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="card card--work">
+        <div class="card__hours-content">
+          <div class="card__top-disc">
+            <h2 class="card__title">Work</h2>
+            <span>
+              <img src="./images/icon-ellipsis.svg" alt="Ellipsis">
+            </span>
+          </div>
+          <div class="card__bottom-disc">
+            <h3 class="card__hours">32hrs</h3>
+            <div>
+              <p class="card__previous">Last Week - 36hrs</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card card--play">
+        <div class="card__hours-content">
+          <div class="card__top-disc">
+            <h2 class="card__title">Play</h2>
+            <span>
+              <img src="./images/icon-ellipsis.svg" alt="Ellipsis">
+            </span>
+          </div>
+          <div class="card__bottom-disc">
+            <h3 class="card__hours">10hrs</h3>
+            <div>
+              <p class="card__previous">Last Week - 8hrs</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card card--study">
+        <div class="card__hours-content">
+          <div class="card__top-disc">
+            <h2 class="card__title">Study</h2>
+            <span>
+              <img src="./images/icon-ellipsis.svg" alt="Ellipsis">
+            </span>
+          </div>
+          <div class="card__bottom-disc">
+            <h3 class="card__hours">4hrs</h3>
+            <div>
+              <p class="card__previous">Last Week - 7hrs</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card card--exercise">
+        <div class="card__hours-content">
+          <div class="card__top-disc">
+            <h2 class="card__title">Exercise</h2>
+            <span>
+              <img src="./images/icon-ellipsis.svg" alt="Ellipsis">
+            </span>
+          </div>
+          <div class="card__bottom-disc">
+            <h3 class="card__hours">4hrs</h3>
+            <div>
+              <p class="card__previous">Last Week - 5hrs</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card card--social">
+        <div class="card__hours-content">
+          <div class="card__top-disc">
+            <h2 class="card__title">Social</h2>
+            <span>
+              <img src="./images/icon-ellipsis.svg" alt="Ellipsis">
+            </span>
+          </div>
+          <div class="card__bottom-disc">
+            <h3 class="card__hours">5hrs</h3>
+            <div>
+              <p class="card__previous">Last Week - 10hrs</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card card--self-care">
+        <div class="card__hours-content">
+          <div class="card__top-disc">
+            <h2 class="card__title">Self Care</h2>
+            <span>
+              <img src="./images/icon-ellipsis.svg" alt="Ellipsis">
+            </span>
+          </div>
+          <div class="card__bottom-disc">
+            <h3 class="card__hours">2hrs</h3>
+            <div>
+              <p class="card__previous">Last Week - 2hrs</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/stebanc/time-tracking-dashboard">Esteban Canaza</a>.
+    </div>
+  </main>
+
+  <script type="module" src="./js/script.js"></script>
+</body>
+
+</html>
