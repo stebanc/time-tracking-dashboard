@@ -15,6 +15,6 @@ This is a solution to the [Time tracking dashboard challenge on Frontend Mentor]
 
 ## Solution
 
-[Time tracking dashboard challenge challenge ](https://stebanc.github.io/time-tracking-dashboard/).
+[Time tracking dashboard challenge challenge ](https://stebanc.github.io/time-tracking-dashboard/dist/).
 
 ![Design preview for the Time tracking dashboard challenge challenge  coding challenge](./dist/images/time-tracking-dashboard-solution.png)
