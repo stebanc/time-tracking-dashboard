@@ -26,7 +26,7 @@ function getReport(url) {
     });
 }
 function setReport(data) {
-    getReport('../data.json').then((value) => {
+    getReport('https://github.com/stebanc/time-tracking-dashboard/data.json').then((value) => {
         for (let i = 0; i < value.length; i++) {
             const current = cardsArray[i].querySelector('h3');
             const previous = cardsArray[i].querySelector('p');
